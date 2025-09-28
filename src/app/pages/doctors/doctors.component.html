@@ -4,8 +4,7 @@
   <div class="slider-wrapper">
     <button class="slider-btn prev" (click)="prevSlide()">‹</button>
 
-    <div class="slider" [style.transform]="'translateX(-' + currentIndex * 220 + 'px)'">
-
+    <div class="slider" [style.transform]="'translateX(-' + currentIndex * cardWidth + 'px)'">
       <div class="doctor-card"><img src="Doctor1.jpg" alt="Doctor 1"></div>
       <div class="doctor-card"><img src="Doctor2.jpg" alt="Doctor 2"></div>
       <div class="doctor-card"><img src="Doctor3.jpg" alt="Doctor 3"></div>
@@ -52,7 +51,6 @@
       <div class="doctor-card"><img src="Doctor44.jpg" alt="Doctor 44"></div>
       <div class="doctor-card"><img src="Doctor45.jpg" alt="Doctor 45"></div>
       <div class="doctor-card"><img src="Doctor46.jpg" alt="Doctor 46"></div>
-
     </div>
 
     <button class="slider-btn next" (click)="nextSlide()">›</button>

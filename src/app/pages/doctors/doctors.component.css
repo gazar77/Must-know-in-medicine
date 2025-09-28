@@ -25,24 +25,24 @@ h1 {
 }
 
 .doctor-card {
-  min-width: 200px;
+  flex: 0 0 auto;
   margin: 0 10px;
-  flex-shrink: 0;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .doctor-card img {
   width: 100%;
+  max-width: 200px;
   height: 220px;
   object-fit: cover;
   border-radius: 16px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .doctor-card:hover img {
   transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .slider-btn {
@@ -73,22 +73,18 @@ h1 {
   right: 10px;
 }
 
-/* ===================== Media Queries Responsive ===================== */
-@media (max-width: 1400px) {
-  .doctor-card {
-    min-width: 180px;
-  }
-}
-
+/* ===================== Responsive ===================== */
 @media (max-width: 1200px) {
-  .doctor-card {
-    min-width: 160px;
+  .doctor-card img {
+    max-width: 180px;
+    height: 200px;
   }
 }
 
 @media (max-width: 992px) {
-  .doctor-card {
-    min-width: 140px;
+  .doctor-card img {
+    max-width: 150px;
+    height: 180px;
   }
   .slider-btn {
     font-size: 2rem;
@@ -97,9 +93,9 @@ h1 {
 }
 
 @media (max-width: 768px) {
-  .doctor-card {
-    min-width: 120px;
-    margin: 0 5px;
+  .doctor-card img {
+    max-width: 130px;
+    height: 160px;
   }
   .slider-btn {
     font-size: 1.8rem;
@@ -108,12 +104,9 @@ h1 {
 }
 
 @media (max-width: 576px) {
-  .doctor-card {
-    min-width: 100px;
-    height: auto;
-  }
   .doctor-card img {
-    height: 160px;
+    max-width: 100px;
+    height: 140px;
   }
   .slider-btn {
     font-size: 1.5rem;
