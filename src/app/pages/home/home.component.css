@@ -1,6 +1,6 @@
 /* ====================== Conference Hero Section ====================== */
 .conference-hero {
-  background-image: url('../../../../public/WhatsApp\ Image\ 2025-09-28\ at\ 13.10.45_32286974.jpg'); /* ضع صورة المؤتمر هنا */
+  background-image: url('../../../../public/WhatsApp\ Image\ 2025-09-28\ at\ 13.10.45_32286974.jpg'); /* صورة المؤتمر من public */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -27,6 +27,7 @@
   position: relative;
   z-index: 2;
   color: #fff;
+  padding: 0 15px; /* padding للتأكد من المسافات على الشاشات الصغيرة */
 }
 
 .conference-content h1 {
@@ -69,12 +70,14 @@
   font-weight: 700;
   color: #141240;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .section-subtitle {
   font-size: 18px;
   color: #555;
   margin-bottom: 40px;
+  text-align: center;
 }
 
 /* Grid for services */
@@ -120,27 +123,28 @@
   color: #666;
   line-height: 1.6;
 }
+
 /* ====================== About Us Section ====================== */
 .about-section {
   margin: 80px auto;
-  padding: 0 20px; /* إضافة padding للهوامش على الشاشات الصغيرة */
+  padding: 0 20px;
 }
 
 .about-content {
   display: flex;
   align-items: center;
   gap: 40px;
-  flex-wrap: wrap; /* يسمح للأقسام بالانتقال لأسفل عند ضيق الشاشة */
+  flex-wrap: wrap;
 }
 
 .about-text {
-  flex: 1 1 300px; /* يسمح بالتمدد والتقلص، الحد الأدنى 300px */
+  flex: 1 1 300px;
 }
 
 .about-text h2 {
   color: #b30000;
   margin-bottom: 15px;
-  font-size: 2rem; /* حجم قابل للتعديل حسب الشاشة */
+  font-size: 2rem;
 }
 
 .about-text p {
@@ -159,23 +163,81 @@
   height: auto;
 }
 
-/* Media Queries للشاشات الصغيرة */
+/* ====================== Media Queries للشاشات الصغيرة ====================== */
+@media (max-width: 1024px) {
+  .conference-content h1 {
+    font-size: 2.5rem;
+  }
+  .conference-content p {
+    font-size: 1.3rem;
+  }
+  .service-title {
+    font-size: 20px;
+  }
+  .service-desc {
+    font-size: 15px;
+  }
+}
+
 @media (max-width: 768px) {
+  .conference-hero {
+    height: 60vh;
+  }
+  .conference-content h1 {
+    font-size: 2rem;
+  }
+  .conference-content p {
+    font-size: 1.1rem;
+  }
   .about-content {
-    flex-direction: column; /* يصبح كل شيء فوق بعضه */
+    flex-direction: column;
     align-items: center;
     text-align: center;
   }
-
   .about-text h2 {
     font-size: 1.8rem;
   }
-
   .about-text p {
     font-size: 0.95rem;
   }
-
   .about-image {
-    margin-top: 20px; /* مسافة بين النص والصورة */
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .conference-hero {
+    height: 50vh;
+  }
+  .conference-content h1 {
+    font-size: 1.6rem;
+  }
+  .conference-content p {
+    font-size: 0.9rem;
+  }
+  .conference-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+  .section-title {
+    font-size: 28px;
+  }
+  .section-subtitle {
+    font-size: 16px;
+  }
+  .service-card {
+    padding: 15px;
+  }
+  .service-title {
+    font-size: 18px;
+  }
+  .service-desc {
+    font-size: 14px;
+  }
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+  .about-text p {
+    font-size: 0.9rem;
   }
 }

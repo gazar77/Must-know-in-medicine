@@ -73,21 +73,54 @@ h1 {
   right: 10px;
 }
 
-/* Responsive */
-@media (max-width: 1200px) {
+/* ===================== Media Queries Responsive ===================== */
+@media (max-width: 1400px) {
   .doctor-card {
     min-width: 180px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+  .doctor-card {
+    min-width: 160px;
+  }
+}
+
+@media (max-width: 992px) {
   .doctor-card {
     min-width: 140px;
-    margin: 0 6px;
   }
+  .slider-btn {
+    font-size: 2rem;
+    padding: 12px 14px;
+  }
+}
 
+@media (max-width: 768px) {
+  .doctor-card {
+    min-width: 120px;
+    margin: 0 5px;
+  }
   .slider-btn {
     font-size: 1.8rem;
-    padding: 12px 14px;
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .doctor-card {
+    min-width: 100px;
+    height: auto;
+  }
+  .doctor-card img {
+    height: 160px;
+  }
+  .slider-btn {
+    font-size: 1.5rem;
+    padding: 8px 10px;
+  }
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
   }
 }

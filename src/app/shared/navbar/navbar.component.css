@@ -1,6 +1,6 @@
 /* ===== الشريط العلوي ===== */
 .bg-dark {
-  background-color: #141240 !important; /* اللون الغامق */
+  background-color: #141240 !important;
 }
 
 .bg-dark .container span,
@@ -28,15 +28,15 @@
 
 /* ===== النافبار الأساسي ===== */
 .navbar {
-  padding: 15px 0;
+  padding: 10px 0;
   border-bottom: 1px solid #eee;
 }
 
 .navbar-brand img {
   height: 60px;
+  max-width: 100%;
 }
 
-/* اللينكات */
 .navbar-nav .nav-link {
   font-weight: 500;
   color: #333 !important;
@@ -71,4 +71,38 @@
 .navbar-toggler:focus {
   outline: none;
   box-shadow: none;
+}
+
+/* تعديل لتصغير المسافات على الشاشات الصغيرة */
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  .navbar-nav .nav-link {
+    margin: 5px 0;
+  }
+  .btn-warning {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .bg-dark .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+/* تعديل للشاشات الصغيرة جدًا */
+@media (max-width: 575px) {
+  .navbar-brand img {
+    height: 50px;
+  }
+  .btn-warning {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+  .bg-dark .container span {
+    display: block;
+    margin-bottom: 5px;
+  }
 }
