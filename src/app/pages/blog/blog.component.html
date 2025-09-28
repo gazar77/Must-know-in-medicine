@@ -1,0 +1,21 @@
+<!-- Blog Section -->
+<section class="blog-section container my-5">
+  <h1 class="text-center mb-5" style="font-size: 3rem; font-weight: bold; color: #0d3b66;">
+    {{ languageService.translate('blog_title') }}
+  </h1>
+
+  <div class="row g-4">
+    <div class="col-md-4" *ngFor="let post of blogPosts">
+      <div class="card h-100 shadow">
+        <img [src]="post.image" class="card-img-top" [alt]="languageService.translate(post.titleKey)">
+        <div class="card-body">
+          <h5 class="card-title">{{ languageService.translate(post.titleKey) }}</h5>
+          <p class="card-text">{{ languageService.translate(post.descKey) }}</p>
+          <a [href]="post.link" target="_blank" class="btn btn-primary">
+            {{ languageService.translate('read_more') }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

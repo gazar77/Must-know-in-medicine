@@ -1,0 +1,133 @@
+/* ====================== Footer ====================== */
+.footer {
+  background-color: #dcdcdc;
+  color: #333;
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.footer img {
+  max-height: 80px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.footer p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 10px 0;
+}
+
+.footer h6 {
+  margin-bottom: 15px;
+  color: #141240;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer a:hover {
+  color: #c7a972;
+}
+
+.footer-column {
+  flex: 1 1 220px; /* العمود يتمدد ويضيق حسب المساحة */
+  min-width: 180px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  background-color: #3f6af8;
+  width: 100%;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  padding: 15px 20px;
+  margin-top: 20px;
+  box-sizing: border-box;
+  border-radius: 4px 4px 0 0;
+}
+
+/* ====================== Media Queries ====================== */
+
+/* شاشات متوسطة Tablets */
+@media (max-width: 992px) {
+  .footer {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-column {
+    flex: 1 1 45%;
+    margin-bottom: 20px;
+  }
+
+  .footer img {
+    margin: 0 auto 15px auto;
+  }
+}
+
+/* شاشات صغيرة Mobile */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 15px;
+  }
+
+  .footer-column {
+    flex: 1 1 100%;
+    margin-bottom: 25px;
+  }
+
+  .footer img {
+    margin: 0 auto 15px auto;
+  }
+
+  .footer h6 {
+    font-size: 15px;
+  }
+
+  .footer p, .footer a {
+    font-size: 13px;
+  }
+
+  .footer-bottom {
+    font-size: 13px;
+    padding: 12px 15px;
+  }
+}
+
+/* شاشات صغيرة جداً Very Small Mobile */
+@media (max-width: 480px) {
+  .footer {
+    padding: 20px 10px;
+    gap: 15px;
+  }
+
+  .footer-column {
+    margin-bottom: 20px;
+  }
+
+  .footer h6 {
+    font-size: 14px;
+  }
+
+  .footer p, .footer a {
+    font-size: 12px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+    padding: 10px 10px;
+  }
+}

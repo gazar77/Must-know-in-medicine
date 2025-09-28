@@ -1,0 +1,139 @@
+<div class="bg-dark text-white py-1">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div>
+      <span class="me-3"><i class="fas fa-phone"></i> 16111</span>
+      <span class="me-3">
+        <i class="fas fa-envelope"></i> info&#64;Mustknowinmedicine.com
+      </span>
+      <span>
+        <i class="fas fa-map-marker-alt"></i>
+        {{ languageService.currentLang === 'ar'
+          ? 'محور 26 يوليو، 6 أكتوبر، مصر'
+          : '26th of July Corridor, 6th of October, Egypt' }}
+      </span>
+    </div>
+    <div class="d-flex align-items-center">
+      <!-- أيقونات السوشيال مع روابط -->
+      <a
+        href="https://www.youtube.com/channel/UCGqg-HoPYb2IxCLl1cJzfBw"
+        target="_blank"
+        class="text-white me-3"
+      >
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a
+        href="https://www.tiktok.com/@must.know.in.medi?_t=ZS-905MZnmvOSG&_r=1"
+        target="_blank"
+        class="text-white me-3"
+      >
+        <i class="fab fa-tiktok"></i>
+      </a>
+      <a
+        href="https://x.com/must_medicine"
+        target="_blank"
+        class="text-white me-3"
+      >
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a
+        href="https://www.instagram.com/must_know_in_medicine?igsh=MW4yMXUwYXNtc3Nxbg%3D%3D&utm_source=qr"
+        target="_blank"
+        class="text-white me-3"
+      >
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a
+        href="https://www.facebook.com/share/1AQAvdgg9B/?mibextid=wwXIfr"
+        target="_blank"
+        class="text-white me-3"
+      >
+        <i class="fab fa-facebook"></i>
+      </a>
+
+      <!-- Dropdown تغيير اللغة -->
+      <div class="dropdown">
+        <button
+          class="btn btn-sm btn-outline-light dropdown-toggle"
+          type="button"
+          data-bs-toggle="dropdown"
+        >
+          {{ languageService.currentLang === 'ar' ? 'العربية' : 'English' }}
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li>
+            <a class="dropdown-item" (click)="changeLang('ar')">العربية</a>
+          </li>
+          <li>
+            <a class="dropdown-item" (click)="changeLang('en')">English</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- الناف بار الأساسي -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div class="container">
+    <!-- اللوجو -->
+    <a class="navbar-brand" href="#">
+      <img
+        src="ChatGPT Image Sep 27, 2025, 09_19_58 PM.png"
+        alt="Souad Kafafi Hospital Logo"
+        height="60"
+      />
+    </a>
+
+    <!-- زرار الموبايل -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNavbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- اللينكات -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">{{
+            languageService.translate('home')
+          }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about">{{
+            languageService.translate('about')
+          }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/doctors">{{
+            languageService.translate('doctors')
+          }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">{{
+            languageService.translate('patients')
+          }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact">{{
+            languageService.translate('contact')
+          }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/blog">{{
+            languageService.translate('blog')
+          }}</a>
+        </li>
+      </ul>
+
+      <!-- زر الاتصال -->
+      <a href="tel:16111" class="btn btn-warning fw-bold">{{
+        languageService.translate('call')
+      }}</a>
+    </div>
+  </div>
+</nav>
+```

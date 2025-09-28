@@ -1,0 +1,59 @@
+<footer class="footer bg-light pt-5" [dir]="languageService.currentLang === 'ar' ? 'rtl' : 'ltr'">
+  <div class="container">
+    <div class="row">
+      <!-- لوجو + وصف -->
+      <div class="col-md-4 mb-4">
+        <img src="ChatGPT Image Sep 27, 2025, 09_19_58 PM.png" alt="Souad Kafafi Hospital" class="mb-3" height="80" />
+        <p *ngIf="languageService.currentLang === 'en'">
+          Cardiac Catheterization Department at Souad Kafafi University Hospital:
+          Providing advanced cardiac care with precision, compassion,
+          and the latest medical technology.
+        </p>
+        <p *ngIf="languageService.currentLang === 'ar'">
+          قسم القسطرة القلبية بمستشفى سعاد كفافي الجامعي:
+          نقدم رعاية قلبية متقدمة بدقة ورحمة وبأحدث التقنيات الطبية.
+        </p>
+      </div>
+
+      <!-- روابط سريعة -->
+      <div class="col-md-4 mb-4">
+        <h6 class="fw-bold" *ngIf="languageService.currentLang === 'en'">Quick Links</h6>
+        <h6 class="fw-bold" *ngIf="languageService.currentLang === 'ar'">روابط سريعة</h6>
+
+        <ul class="list-unstyled">
+          <li><a href="#">{{ languageService.currentLang === 'en' ? 'Home' : 'الرئيسية' }}</a></li>
+          <li><a routerLink="/about">{{ languageService.currentLang === 'en' ? 'About ' : 'عن القسم' }}</a></li>
+          <li><a routerLink="/doctors">{{ languageService.currentLang === 'en' ? 'doctors' : 'أطباؤنا' }}</a></li>
+          <li><a href="#">{{ languageService.currentLang === 'en' ? 'patients' : 'المرضى' }}</a></li>
+          <li><a routerLink="/contact">{{ languageService.currentLang === 'en' ? 'contact' : 'التواصل' }}</a></li>
+          <li><a routerLink="/blog">{{ languageService.currentLang === 'en' ? 'blog' : 'المدونة' }}</a></li>
+        </ul>
+      </div>
+
+      <!-- بيانات التواصل -->
+      <div class="col-md-4 mb-4">
+        <h6 class="fw-bold" *ngIf="languageService.currentLang === 'en'">Contact Us</h6>
+        <h6 class="fw-bold" *ngIf="languageService.currentLang === 'ar'">تواصل معنا</h6>
+
+        <p>
+          {{ languageService.currentLang === 'en'
+              ? '26th of July Corridor, 6th of October, Egypt'
+              : 'محور 26 يوليو، السادس من أكتوبر، مصر' }}
+        </p>
+        <p>Email: info&#64;Mustknowinmedicine.com</p>
+        <p>
+          {{ languageService.currentLang === 'en' ? 'Call Center: 16111' : 'مركز الاتصال: 16111' }}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- الحقوق -->
+  <div class="footer-bottom text-center py-3">
+    <p class="m-0">
+      {{ languageService.currentLang === 'en'
+          ? '© 2025 Souad Kafafi Hospital - Cardiac Catheterization Dept. All Rights Reserved.'
+          : '© 2025 مستشفى سعاد كفافي - قسم القسطرة القلبية. جميع الحقوق محفوظة.' }}
+    </p>
+  </div>
+</footer>

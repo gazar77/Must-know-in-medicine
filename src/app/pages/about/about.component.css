@@ -1,0 +1,189 @@
+/* Hero Section */
+.about-hero {
+  position: relative;
+  background: url("../../../../public/download.jpg") center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.about-hero .overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.about-hero p {
+  font-size: 1.3rem;
+}
+
+/* About Us Section */
+.about-section {
+  margin: 80px auto;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  color: #b30000;
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  line-height: 1.8;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Mission Section */
+.mission-section {
+  margin: 80px auto;
+}
+
+.mission-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.mission-text {
+  flex: 1;
+}
+
+.mission-text h2 {
+  color: #b30000;
+  margin-bottom: 15px;
+}
+
+.mission-text p {
+  line-height: 1.8;
+}
+
+.mission-image {
+  flex: 1;
+}
+
+.mission-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Why Choose Us Section */
+.why-choose-section {
+  margin: 80px auto;
+}
+
+.why-choose-section h2 {
+  text-align: center;
+  color: #b30000;
+  margin-bottom: 40px;
+}
+
+.why-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.why-text {
+  flex: 2;
+}
+
+.why-text ul {
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.why-text li {
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.why-text li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #b30000;
+  font-weight: bold;
+}
+
+.why-image {
+  flex: 1;
+}
+
+.why-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .about-content,
+  .mission-content,
+  .why-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image,
+  .mission-image,
+  .why-image {
+    margin-top: 20px;
+  }
+}
+ .hero-section {
+    text-align: center;
+    padding: 60px 20px;
+  }
+  .hero-section h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #1a1a3a;
+    margin-bottom: 20px;
+  }
+  .hero-section p {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+  }
+  .hero-section .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #1a1a3a;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+  }
+  .hero-section .btn:hover {
+    background-color: #333366;
+  }
