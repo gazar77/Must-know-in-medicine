@@ -1,17 +1,17 @@
 /* ====================== Conference Hero Section ====================== */
 .conference-hero {
-  background-image: url('../../../../public/WhatsApp\ Image\ 2025-09-28\ at\ 13.10.45_32286974.jpg'); /* صورة المؤتمر من public */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  text-align: center;
+  width: 100%;
+  position: relative; /* لو عايز overlay */
 }
 
+.conference-hero img.conference-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Overlay (اختياري، لو النص فوق الصورة) */
 .conference-hero::after {
   content: '';
   position: absolute;
@@ -19,15 +19,18 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(13, 59, 102, 0.6); /* تظليل للنص */
+  background-color: rgba(0,0,0,0.3); /* خفيف */
   z-index: 1;
 }
 
+/* ====================== Conference Content Section ====================== */
 .conference-content {
-  position: relative;
+  position: relative; /* خلي النص طبيعي بعد الصورة */
+  margin-top: 20px;  /* مسافة تحت الصورة */
+  padding: 20px 15px;
+  text-align: center;
+  color: #01013a; /* نص أسود */
   z-index: 2;
-  color: #fff;
-  padding: 0 15px; /* padding للتأكد من المسافات على الشاشات الصغيرة */
 }
 
 .conference-content h1 {
@@ -41,8 +44,7 @@
   margin-bottom: 30px;
 }
 
-/* Button for conference hero */
-.conference-btn {
+.hero-btn {
   background-color: #f9a826;
   color: #141240;
   font-weight: 600;
@@ -53,7 +55,7 @@
   transition: all 0.3s ease;
 }
 
-.conference-btn:hover {
+.hero-btn:hover {
   background-color: #ffbf49;
   transform: translateY(-3px);
   color: #141240;
@@ -80,14 +82,12 @@
   text-align: center;
 }
 
-/* Grid for services */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
 }
 
-/* Service card */
 .service-card {
   background: #ffffff;
   border-radius: 12px;
@@ -100,7 +100,6 @@
   transform: translateY(-8px);
 }
 
-/* Service image */
 .service-img {
   max-width: 100%;
   height: 220px;
@@ -109,7 +108,6 @@
   margin-bottom: 20px;
 }
 
-/* Service title */
 .service-title {
   font-size: 22px;
   font-weight: 600;
@@ -117,7 +115,6 @@
   margin-bottom: 12px;
 }
 
-/* Service description */
 .service-desc {
   font-size: 16px;
   color: #666;
@@ -159,85 +156,35 @@
 .about-image img {
   width: 100%;
   border-radius: 10px;
-  max-width: 100%;
   height: auto;
 }
 
-/* ====================== Media Queries للشاشات الصغيرة ====================== */
+/* ====================== Media Queries ====================== */
 @media (max-width: 1024px) {
-  .conference-content h1 {
-    font-size: 2.5rem;
-  }
-  .conference-content p {
-    font-size: 1.3rem;
-  }
-  .service-title {
-    font-size: 20px;
-  }
-  .service-desc {
-    font-size: 15px;
-  }
+  .conference-content h1 { font-size: 2.5rem; }
+  .conference-content p { font-size: 1.3rem; }
+  .service-title { font-size: 20px; }
+  .service-desc { font-size: 15px; }
 }
 
 @media (max-width: 768px) {
-  .conference-hero {
-    height: 60vh;
-  }
-  .conference-content h1 {
-    font-size: 2rem;
-  }
-  .conference-content p {
-    font-size: 1.1rem;
-  }
-  .about-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .about-text h2 {
-    font-size: 1.8rem;
-  }
-  .about-text p {
-    font-size: 0.95rem;
-  }
-  .about-image {
-    margin-top: 20px;
-  }
+  .conference-content h1 { font-size: 2rem; }
+  .conference-content p { font-size: 1.1rem; }
+  .about-content { flex-direction: column; align-items: center; text-align: center; }
+  .about-text h2 { font-size: 1.8rem; }
+  .about-text p { font-size: 0.95rem; }
+  .about-image { margin-top: 20px; }
 }
 
 @media (max-width: 576px) {
-  .conference-hero {
-    height: 50vh;
-  }
-  .conference-content h1 {
-    font-size: 1.6rem;
-  }
-  .conference-content p {
-    font-size: 0.9rem;
-  }
-  .conference-btn {
-    padding: 10px 20px;
-    font-size: 1rem;
-  }
-  .section-title {
-    font-size: 28px;
-  }
-  .section-subtitle {
-    font-size: 16px;
-  }
-  .service-card {
-    padding: 15px;
-  }
-  .service-title {
-    font-size: 18px;
-  }
-  .service-desc {
-    font-size: 14px;
-  }
-  .about-text h2 {
-    font-size: 1.5rem;
-  }
-  .about-text p {
-    font-size: 0.9rem;
-  }
+  .conference-content h1 { font-size: 1.6rem; }
+  .conference-content p { font-size: 0.9rem; }
+  .hero-btn { padding: 10px 20px; font-size: 1rem; }
+  .section-title { font-size: 28px; }
+  .section-subtitle { font-size: 16px; }
+  .service-card { padding: 15px; }
+  .service-title { font-size: 18px; }
+  .service-desc { font-size: 14px; }
+  .about-text h2 { font-size: 1.5rem; }
+  .about-text p { font-size: 0.9rem; }
 }
