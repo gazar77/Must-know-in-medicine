@@ -26,6 +26,9 @@ h1 {
 
 .doctor-card {
   flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0 10px;
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -33,8 +36,8 @@ h1 {
 .doctor-card img {
   width: 100%;
   max-width: 200px;
-  height: 220px;
-  object-fit: cover;
+  height: auto; /* يخلي ارتفاع الصورة متناسب مع العرض */
+  object-fit: contain; /* الصورة تظهر كاملة بدون قص */
   border-radius: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s, box-shadow 0.3s;
@@ -77,14 +80,12 @@ h1 {
 @media (max-width: 1200px) {
   .doctor-card img {
     max-width: 180px;
-    height: 200px;
   }
 }
 
 @media (max-width: 992px) {
   .doctor-card img {
     max-width: 150px;
-    height: 180px;
   }
   .slider-btn {
     font-size: 2rem;
@@ -95,7 +96,6 @@ h1 {
 @media (max-width: 768px) {
   .doctor-card img {
     max-width: 130px;
-    height: 160px;
   }
   .slider-btn {
     font-size: 1.8rem;
@@ -106,7 +106,6 @@ h1 {
 @media (max-width: 576px) {
   .doctor-card img {
     max-width: 100px;
-    height: 140px;
   }
   .slider-btn {
     font-size: 1.5rem;
